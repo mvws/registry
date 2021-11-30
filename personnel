@@ -1,0 +1,26 @@
+using System;
+
+namespace PersonnelRegistry
+{
+    class Registry
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter username:");
+
+            string userName = Console.ReadLine();
+
+            Console.WriteLine("Username is: " + userName);
+
+
+            Console.WriteLine("Enter usersalary:");
+
+            string userSalary = Console.ReadLine();
+
+            Console.WriteLine("Usersallary is: " + userSalary);
+
+
+        }
+}
+}
