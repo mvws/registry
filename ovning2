@@ -1,0 +1,89 @@
+using System;
+
+namespace O2Menu
+{
+    class Program
+    {
+        static void Main()
+        {
+            bool b = true;
+
+            // Creating infinite loop
+            // using while loop
+            while (b)
+
+            {
+                Console.WriteLine("This is the main menu. Navigate by entering numbers to test different functions.");
+
+            // enter user name
+
+            string userName = Console.ReadLine();
+                float price = 0;
+
+                // passing string "str" in 
+                // switch statement
+                switch (userName)
+                {
+
+                    case "0":
+                        Console.WriteLine("Closes Program");
+                        b = false;
+                        break;
+
+                    case "1":
+                        Console.WriteLine("Number of People.");
+                        string Group = Console.ReadLine();
+                        int groupSize = int.Parse(Group);
+                        int Price = 0;
+                        for (var i = 0; i < groupSize;i++)
+                        {
+                            Console.WriteLine("What is your age?");
+                            string GroupAge = Console.ReadLine();
+                            int numGroup = int.Parse(GroupAge);
+                            if (numGroup <= 20)
+                            {
+                                Price = Price + 80;
+                            }
+
+                            if (numGroup >= 64)
+                            {
+                                Price = Price+90;
+                            }
+
+                            else
+                            {
+                                Price = Price + 120;
+                            }
+                        }
+            
+                        Console.WriteLine("Group of size: " + groupSize);
+                        Console.WriteLine("Price: " + Price);
+                        break;
+
+                    case "2":
+                        Console.WriteLine("Please input text.");
+                        string Input = Console.ReadLine();
+                        for (var g = 0; g < 10; g++)
+                        {
+                            Console.Write(Input);
+                        }
+                        break;
+
+                    case "3":
+                        Console.WriteLine("Enter at least three words.");
+                        string Words = Console.ReadLine();
+                        string[] wordList = Words.Split(" ");
+                        string three = wordList[2];
+                        Console.WriteLine(three);
+                        break;
+
+                    default:
+                    Console.WriteLine("Wrong Input");
+                    break;
+            }
+
+ 
+            }
+        }
+    }
+}
